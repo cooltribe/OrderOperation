@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/repeat_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/ordersystem_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <include layout="@layout/line" />
+
+        <TextView
+            android:id="@+id/dispatchNum"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/white"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="@string/dispatch_number_hint"
+            android:textColor="@color/ordersystem_content_color"
+            android:textSize="16sp" />
+
+        <include layout="@layout/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/ordersystem_hint_text_style"
+                        android:text="@string/vehicle_hint" />
+
+                    <TextView
+                        android:id="@+id/vehicle_number"
+                        style="@style/ordersystem_content_text_style" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/ordersystem_hint_text_style"
+                        android:text="@string/vehicle_type_hint" />
+
+                    <TextView
+                        android:id="@+id/vehicle_type"
+                        style="@style/ordersystem_content_text_style" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/ordersystem_hint_text_style"
+                        android:text="@string/total_package_hint" />
+
+                    <TextView
+                        android:id="@+id/total_package"
+                        style="@style/ordersystem_content_text_style"
+                        android:text="@string/goods_number_piece_hint" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/ordersystem_hint_text_style"
+                        android:text="@string/total_volume_hint" />
+
+                    <TextView
+                        android:id="@+id/total_volume"
+                        style="@style/ordersystem_content_text_style"
+                        android:text="@string/stere_hint" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        style="@style/ordersystem_hint_text_style"
+                        android:text="@string/total_weight_hint" />
+
+                    <TextView
+                        android:id="@+id/total_weight"
+                        style="@style/ordersystem_content_text_style"
+                        android:text="@string/kg_hint" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/ordersystem_hint_text_style"
+                    android:text="@string/main_driver_hint" />
+
+                <TextView
+                    android:id="@+id/main_driver_name"
+                    style="@style/ordersystem_content_text_style" />
+
+                <TextView
+                    android:id="@+id/main_driver_phone"
+                    style="@style/ordersystem_content_text_style"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/main_blue" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal" >
+
+                <TextView
+                    style="@style/ordersystem_hint_text_style"
+                    android:text="@string/copilot_hint" />
+
+                <TextView
+                    android:id="@+id/copilot_name"
+                    style="@style/ordersystem_content_text_style" />
+
+                <TextView
+                    android:id="@+id/copilot_phone"
+                    style="@style/ordersystem_content_text_style"
+                    android:layout_marginLeft="20dp"
+                    android:textColor="@color/main_blue" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.searun.orderoperation.pullrefreshview.PullToRefreshListView
+        android:id="@+id/ordersystem_content_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ordersystem_photo_layout"
+        android:layout_below="@+id/ordersystem_title_layout"
+        android:layout_margin="10dp"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="#00000000"
+        android:dividerHeight="10dp"
+        android:fadingEdge="none"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="none" />
+
+    <LinearLayout
+        android:id="@+id/ordersystem_photo_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ordersystem_operation_layout"
+        android:orientation="horizontal" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ordersystem_operation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/tailafter_btn"
+            style="@style/ordersystem_operation_button_style"
+            android:onClick="onClickListener"
+            android:text="@string/tailafter_hint"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/upload_btn"
+            style="@style/ordersystem_operation_button_style"
+            android:onClick="onClickListener"
+            android:text="@string/upload_order_hint"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/ensure_upload_btn"
+            style="@style/ordersystem_operation_button_style"
+            android:onClick="onClickListener"
+            android:text="@string/ensure_upload_order_hint"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/upload_btn2"
+            style="@style/ordersystem_operation_button_style"
+            android:onClick="onClickListener"
+            android:text="@string/upload_order_hint2"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/grid_btn"
+            style="@style/ordersystem_operation_button_style"
+            android:onClick="onClickListener"
+            android:text="@string/grid_hint"
+            android:visibility="gone" />
+         <Button
+            android:id="@+id/arrival_btn"
+            style="@style/ordersystem_operation_button_style"
+            android:onClick="onClickListener"
+            android:text="@string/arrival_goods_hint"
+            android:visibility="gone" />
+         <Button
+            android:id="@+id/check_photo_btn"
+            style="@style/ordersystem_operation_button_style"
+            android:onClick="onClickListener"
+            android:text="@string/check_photo_hint"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>

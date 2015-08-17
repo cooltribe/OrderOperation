@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:orientation="horizontal" >
+
+    <TextView
+        style="@style/ordersystem_hint_text_style"
+        android:text="@string/goods_name_hint" />
+
+    <TextView
+        android:id="@+id/goods_name"
+        style="@style/ordersystem_content_text_style" />
+
+</LinearLayout>

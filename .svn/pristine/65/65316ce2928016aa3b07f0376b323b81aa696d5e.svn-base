@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/repeat_background"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/order_number"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center|left"
+            android:paddingLeft="10dp"
+            android:text="@string/dispatch_number_hint"
+            android:textColor="@color/ordersystem_content_color"
+            android:textSize="16sp" />
+
+        <LinearLayout
+            android:id="@+id/photo_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/operation_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/photograph_btn"
+            style="@style/ordersystem_operation_button_style"
+            android:onClick="onClickListener"
+            android:text="@string/photograph_hint" />
+
+        <Button
+            android:id="@+id/upload_order_btn"
+            style="@style/ordersystem_operation_button_style"
+            android:onClick="onClickListener"
+            android:text="@string/upload_order_hint2" />
+    </LinearLayout>
+
+</RelativeLayout>

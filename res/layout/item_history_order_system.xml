@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/item_dispatchNum"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center|left"
+        android:paddingLeft="10dp"
+        android:text="@string/dispatch_number_hint"
+        android:textColor="@color/ordersystem_content_color"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/angle_grey_bg"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp" >
+
+        <TextView
+            android:id="@+id/item_order_num"
+            style="@style/ordersystem_content_text_style"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:text="@string/order_number" />
+
+        <CheckBox
+            android:id="@+id/item_expand_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:button="@drawable/expand_pressed_style" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/item_order_detail_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <include layout="@layout/line" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/ordersystem_hint_text_style"
+                android:text="@string/working_order_number" />
+
+            <TextView
+                android:id="@+id/working_order_number"
+                style="@style/ordersystem_content_text_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/ordersystem_hint_text_style"
+                android:text="@string/goods_owner_hint" />
+
+            <TextView
+                android:id="@+id/goods_owner"
+                style="@style/ordersystem_content_text_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/ordersystem_hint_text_style"
+                android:text="@string/goods_from_address_hint" />
+
+            <TextView
+                android:id="@+id/goods_from_address"
+                style="@style/ordersystem_content_text_style"
+                android:ellipsize="none"
+                android:maxLines="2"
+                android:singleLine="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/ordersystem_hint_text_style"
+                android:text="@string/goods_to_address_hint" />
+
+            <TextView
+                android:id="@+id/goods_to_address"
+                style="@style/ordersystem_content_text_style"
+                android:ellipsize="none"
+                android:maxLines="2"
+                android:singleLine="false" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/ordersystem_hint_text_style"
+                android:text="@string/earliset_arrival_time_hint" />
+
+            <TextView
+                android:id="@+id/earlist_arrival_time"
+                style="@style/ordersystem_content_text_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <TextView
+                style="@style/ordersystem_hint_text_style"
+                android:text="@string/lastest_arrival_time_hint" />
+
+            <TextView
+                android:id="@+id/lastest_arrival_time"
+                style="@style/ordersystem_content_text_style" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/goods_detail_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
